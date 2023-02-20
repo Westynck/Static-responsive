@@ -1,0 +1,144 @@
+/* Définir les styles pour le corps de la page */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour l'en-tête de la page */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7cac9;
+  padding: 1.25rem;
+}
+
+/* Masquer l'en-tête sur les pages d'impression */
+@media print {
+  .header {
+    display: none;
+  }
+}
+
+header img {
+  height: 3.125rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 1.25rem;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #f00;
+}
+
+/* Styles pour la section principale */
+main {
+  background-color: #92a8d1;
+  padding: 1.25rem 3.125rem;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  color: #000;
+  text-align: center;
+}
+
+/* Styles pour la section des articles */
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.313rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  width: 31.25rem;
+}
+
+.card p {
+  margin-top: 0.625rem;
+}
+
+.image {
+  height: 12.5rem;
+  width: 12.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 12.5rem;
+  font-size: 1.875rem;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+/* Styles pour le pied de page */
+footer {
+  background-color: #e9d8a6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.125rem;
+}
+
+footer div {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+footer h2 {
+  color: #333;
+}
+
+.describe {
+  display: flex;
+  margin-top: 0.625rem;
+}
+
+/* Styles pour les écrans de petite taille */
+@media (max-width: 768px) {
+  .items {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .describe {
+    display: none;
+  }
+}
